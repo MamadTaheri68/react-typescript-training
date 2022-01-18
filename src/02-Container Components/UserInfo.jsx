@@ -1,6 +1,6 @@
 const UserInfo = ({ user }) => {
-    const { name, age, hairColor, hobbies } = user;
-    return (
+    const { name, age, hairColor, hobbies } = user || {} ;
+    return user ? (
          <>
             <h3>{name}</h3>
             <p>Age: {age} years</p>
@@ -10,7 +10,7 @@ const UserInfo = ({ user }) => {
                 {hobbies.map(hobby => <li key={hobby}>{hobby}</li>)}
             </ul>
          </>
-    );
+    ) : <p>Loading...</p>;
 };
 
 export default UserInfo;

@@ -1,10 +1,11 @@
-import React from 'react';
+import CurrentUserLoader from "./02-Container Components/CurrentUserLoader";
+import UserInfo from "./02-Container Components/UserInfo";
 
 const App = () => {
   return (
-    <div>
-      
-    </div>
+     <CurrentUserLoader>
+       <UserInfo />
+     </CurrentUserLoader>
   );
 };
 
